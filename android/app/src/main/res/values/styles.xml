@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        LaunchTheme: shown while Flutter engine boots.
+        Must use a solid background — no drawable dependencies.
+    -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <!-- Prevent white flash on startup -->
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <!--
+        NormalTheme: applied after Flutter renders its first frame.
+        Referenced by io.flutter.embedding.android.NormalTheme meta-data.
+        Background must be transparent so Flutter can paint over it.
+    -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

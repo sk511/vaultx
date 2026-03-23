@@ -1,0 +1,80 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace "com.fortress.vault"
+    compileSdk 35
+    ndkVersion "27.0.12077973"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        applicationId "com.fortress.vault"
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName "2.0.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
+                          "proguard-rules.pro"
+        }
+    }
+
+    packagingOptions {
+        resources {
+            excludes += [
+                "META-INF/INDEX.LIST",
+                "META-INF/io.netty.versions.properties",
+                "META-INF/*.kotlin_module",
+            ]
+        }
+    }
+}
+
+flutter {
+    source "../.."
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24"
+
+    // AppCompat — required by FlutterFragmentActivity which extends AppCompatActivity
+    implementation "androidx.appcompat:appcompat:1.7.0"
+
+    // Fragment — STABLE version required by local_auth for FragmentActivity
+    // Do NOT use alpha/beta — they break the FragmentActivity check
+    implementation "androidx.fragment:fragment-ktx:1.8.4"
+
+    // Biometric — STABLE version, not alpha
+    implementation "androidx.biometric:biometric:1.1.0"
+
+    // Firebase
+    implementation platform("com.google.firebase:firebase-bom:33.6.0")
+    implementation "com.google.firebase:firebase-auth-ktx"
+    implementation "com.google.firebase:firebase-firestore-ktx"
+
+    // MultiDex
+    implementation "androidx.multidex:multidex:2.0.1"
+}

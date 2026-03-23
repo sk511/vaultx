@@ -1,0 +1,31 @@
+# Firebase credentials — never commit
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Signing
+android/key.properties
+android/app/*.keystore
+android/app/*.jks
+*.keystore
+*.jks
+
+# Flutter
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

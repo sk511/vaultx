@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- ── App identity ─────────────────────────────────────────── -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>VaultX</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>vaultx</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
+
+    <!-- ── Orientation — portrait only ──────────────────────────── -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+
+    <!-- ── Biometric permission strings ─────────────────────────── -->
+    <key>NSFaceIDUsageDescription</key>
+    <string>VaultX uses Face ID to protect your vault and authorize sensitive actions like copying passwords and viewing secrets.</string>
+
+    <!-- ── Camera — NOT used, declared to satisfy App Store Review ─ -->
+    <!-- Remove this if you add QR code scanning for TOTP secrets -->
+
+    <!-- ── URL schemes (Google Sign-In / OAuth redirect) ────────── -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fortressvault</string>
+                <!-- Add your REVERSED_CLIENT_ID from GoogleService-Info.plist here -->
+                <!-- <string>com.googleusercontent.apps.YOUR_CLIENT_ID</string> -->
+            </array>
+        </dict>
+    </array>
+
+    <!-- ── Status bar ────────────────────────────────────────────── -->
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+
+    <!-- ── Launch screen ─────────────────────────────────────────── -->
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+
+    <!-- ── Flutter ──────────────────────────────────────────────── -->
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+
+    <!-- ── Security: disable data sharing with iCloud ───────────── -->
+    <!-- Vault data stays in Keychain only, never in iCloud Drive -->
+    <key>NSUbiquitousContainers</key>
+    <dict/>
+
+    <!-- ── App Transport Security ───────────────────────────────── -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!-- Enforce HTTPS everywhere — no exceptions -->
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Data Extraction Rules (Android 12+ / API 31+)
+  Prevents vault data from being extracted via adb backup, cloud backup,
+  or device-to-device transfers. All sensitive data lives in flutter_secure_storage
+  which already uses the Android Keystore — this adds an extra manifest-level block.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="file" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="file" path="." />
+    </device-transfer>
+</data-extraction-rules>
