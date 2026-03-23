@@ -114,8 +114,6 @@ The password manager market is dominated by closed-source, subscription-based pr
 
 ## ✦ Screenshots
 
-> _Screenshots coming soon — contributions welcome_
-
 | Lock Screen | Vault | Generator | Settings |
 |:-----------:|:-----:|:---------:|:--------:|
 | ![Lock](docs/screenshots/lock.png) | ![Vault](docs/screenshots/vault.png) | ![Generator](docs/screenshots/generator.png) | ![Settings](docs/screenshots/settings.png) |
@@ -307,16 +305,13 @@ Logo in README. Priority issue handling. Recognition as a security-first organis
 **🔬 Security Partner — $500/month**  
 Co-fund the independent security audit. Your organisation credited in the audit report. Early access to security findings.
 
-[**→ Sponsor on GitHub**](https://github.com/sponsors/yourusername)  
-[**→ One-time donation via Ko-fi**](https://ko-fi.com/yourusername)
-
 ---
 
 ## ✦ Security Policy
 
 Found a vulnerability? Please **do not** open a public GitHub issue.
 
-Instead, use [GitHub's private security advisory](https://github.com/yourusername/vaultx/security/advisories/new) to report it confidentially. All reports are acknowledged within 48 hours.
+Instead, use [GitHub's private security advisory](https://github.com/sk511/vaultx/security/advisories/new) to report it confidentially. All reports are acknowledged within 48 hours.
 
 See [SECURITY.md](SECURITY.md) for the full responsible disclosure policy.
 
@@ -345,6 +340,6 @@ You are free to use, modify, and distribute this software. If you build a commer
 
 If VaultX matters to you, give it a ⭐ — it helps more people find it.
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/vaultx?style=social)](https://github.com/yourusername/vaultx/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/sk511/vaultx?style=social)](https://github.com/sk511/vaultx/stargazers)
 
 </div>
